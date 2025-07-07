@@ -49,11 +49,16 @@ if st.button("Submit Expense"):
 st.markdown("---")
 st.subheader("📋 Expense History")
 
+columns = ["Date", "Amount", "Category", "Payment Method", "Note"]
+
 if os.path.isfile(file_path):
     expenses = pd.read_csv(file_path)
     st.dataframe(expenses)
 else:
     st.info("No expenses recorded yet.")
+    expenses = pd.DataFrame(columns=columns)  # 👈 safe empty fallback
+
+
 
 st.markdown("---")
 st.subheader("📈 Summary")
