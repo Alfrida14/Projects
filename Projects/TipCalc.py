@@ -1,3 +1,5 @@
+print("💸TIP CALCULATOR")
+
 print("1=Rs.")
 print("2=Dollar")
 print("3=Euro")
